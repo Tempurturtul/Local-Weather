@@ -1,0 +1,118 @@
+html, body
+  { height: 100%; }
+body
+  { background-size: cover; background-repeat: no-repeat; font-family: 'Oswald', sans-serif; }
+main
+  { height: 100%; display: flex; }
+a
+  { text-decoration: none; color: inherit; }
+p
+  { margin: 0; text-align: center; }
+sup
+  { font-size: 50%; line-height: 0; position: relative; vertical-align: baseline; top: -1.25em; }
+b
+  { font-weight: normal; font-variant: small-caps; }
+small
+  { font-size: 0.7rem; opacity: 0.8; }
+
+#app
+  { margin: auto; display: flex; flex-direction: column; align-items: center; background: rgba(30,30,30,0.95); box-shadow: 0 0 3px 1px black; padding: 10px 10px 0 10px; max-width: 800px; position: relative; color: #F9F9F9; }
+#current
+  { display: flex; justify-content: center; align-items: center; margin: 0 20px; }
+#current p:first-child
+  { font-size: 4rem; }
+#current p:last-child
+  { font-size: 2.5rem; margin-left: 25px; }
+#details
+  { color: #DDDDDD; display: flex; justify-content: center; align-items: center; font-size: 1.2rem; }
+#details p
+  {  text-align: left; }
+#details div:first-child p
+  { white-space: nowrap; }
+#details div:last-child
+  { padding-left: 10px; border-left: solid 1px; margin-left: 10px; }
+#location
+  { font-size: 1.5rem; text-align: center; font-variant: small-caps; margin-top: 20px; }
+#search
+  { position: relative; margin-top: 3px; }
+#search input
+  { height: 30px; box-sizing: border-box; padding: 0 35px 0 5px; color: black; }
+#search button
+  { position: absolute; right: 0; height: 30px; width: 30px; box-sizing: border-box; color: black; line-height: 0; }
+#unitToggle
+  { line-height: 1; padding: 3px; font-size: 0.6rem; position: absolute; top: 3px; right: 3px; border-radius: 10%; border: 1px solid black; color: black; }
+#yahooLogo
+  { margin-top: 17px; height: 29px; }
+#yahooLogo a
+  { background: rgba(0,0,0,.7); position: absolute; width: 100%; height: 29px; left: 0; bottom: 0; display: flex; justify-content: center; }
+#yahooLogo img
+  {  }
+
+@media (max-width: 650px) {
+  #current
+    { flex-direction: column; margin-top: 5px; }
+  #current p:first-child
+    { font-size: 5rem; position: relative; line-height: 1; }
+  #current p:first-child sup
+    { position: absolute; top: .5em; font-size: 40% }
+  #current p:last-child
+    { margin-left: 0; }
+  #details
+    { flex-direction: column; margin-top: 10px; }
+  #details p
+    { text-align: center; }
+  #details div:first-child p
+    { display: inline; }
+  #details div:last-child
+    { padding-left: 0; border-left: none; margin-left: 0; border-top: solid 1px; padding-top: 5px; margin-top: 5px; text-align: center; }
+  #unitToggle
+    { right: auto; left: 3px; }
+}
+
+/**********************************************
+  Background Classes.
+**********************************************/
+.dayStorms
+  { background-image: url('http://i.imgur.com/ohIvvdS.jpg'); }
+.dayWinteryPrecip
+  { background-image: url('http://i.imgur.com/qJEVqGy.jpg'); }
+.dayRain
+  { background-image: url('http://i.imgur.com/xacuvjI.jpg'); }
+.daySnow
+  { background-image: url('http://i.imgur.com/iTtSIZG.jpg'); }
+.dayDust
+  { background-image: url('http://i.imgur.com/PraXyCA.jpg'); }
+.dayFog
+  { background-image: url('http://i.imgur.com/r3yXEOk.jpg'); }
+.dayWind
+  { background-image: url('http://i.imgur.com/aT8C4st.jpg'); }
+.dayCold
+  { background-image: url('http://i.imgur.com/zgNKmZ0.jpg'); }
+.dayClouds
+  { background-image: url('http://i.imgur.com/SV079xP.jpg'); }
+.dayClear
+  { background-image: url('http://i.imgur.com/hMOAzSb.jpg'); }
+.dayHot
+  { background-image: url('http://i.imgur.com/DVDGfDV.jpg'); }
+.nightStorms
+  { background-image: url('http://i.imgur.com/7Sp3yBD.jpg'); }
+.nightWinteryPrecip
+  { background-image: url('http://i.imgur.com/Iresqfw.jpg'); }
+.nightRain
+  { background-image: url('http://i.imgur.com/uMetsHR.jpg'); }
+.nightSnow
+  { background-image: url('http://i.imgur.com/ynlEwkr.jpg'); }
+.nightDust
+  { background-image: url('http://i.imgur.com/Cr2BHQK.jpg'); }
+.nightFog
+  { background-image: url('http://i.imgur.com/bKLzhNv.jpg'); }
+.nightWind
+  { background-image: url('http://i.imgur.com/8ZhIiek.jpg'); }
+.nightCold
+  { background-image: url('http://i.imgur.com/3X571Oy.jpg'); }
+.nightClouds
+  { background-image: url('http://i.imgur.com/OqdxYam.jpg'); }
+.nightClear
+  { background-image: url('http://i.imgur.com/qJUCf7P.jpg'); }
+.nightHot
+  { background-image: url('http://i.imgur.com/5Lb6V1V.jpg'); }

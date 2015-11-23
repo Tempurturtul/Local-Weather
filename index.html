@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A learning project from FreeCodeCamp. Displays the local weather.">
+    <meta name="author" content="Tempurturtul">
+    <title>FreeCodeCamp Zipline - Pomodoro Clock</title>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+    <link href="styles/normalize.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+      <div id='app'>
+        <div id='current'>
+          <p><!-- Current Temperature --></p>
+          <p><!-- Current Conditions --></p>
+        </div>
+        <div id='details'>
+          <div>
+            <p><!-- High --></p>
+            <p><!-- Low --></p>
+          </div>
+          <div>
+            <p><!-- Day Conditions --></p>
+            <p><!-- UV High --></p>
+          </div>
+        </div>
+        <p id='location'></p>
+        <form id='search'>
+          <input type='search' placeholder='Location'><button><i class='fa fa-search'></i></button>
+        </form>
+        <button id='unitToggle' value='Imperial'>&deg;C</button>
+        <div id="yahooLogo">
+          <a href="https://www.yahoo.com/?ilc=401" target="_blank"> <img src="https://poweredby.yahoo.com/white.png" width="134" height="29"/> </a>
+        </div>
+      </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
