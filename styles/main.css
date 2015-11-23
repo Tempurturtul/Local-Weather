@@ -73,46 +73,46 @@ small
   Background Classes.
 **********************************************/
 .dayStorms
-  { background-image: url('http://i.imgur.com/ohIvvdS.jpg'); }
+  { background-image: 'img/dayStorms.jpg'; }
 .dayWinteryPrecip
-  { background-image: url('http://i.imgur.com/qJEVqGy.jpg'); }
+  { background-image: 'img/dayWinteryPrecip.jpg'; }
 .dayRain
-  { background-image: url('http://i.imgur.com/xacuvjI.jpg'); }
+  { background-image: 'img/dayRain.jpg'; }
 .daySnow
-  { background-image: url('http://i.imgur.com/iTtSIZG.jpg'); }
+  { background-image: 'img/daySnow.jpg'; }
 .dayDust
-  { background-image: url('http://i.imgur.com/PraXyCA.jpg'); }
+  { background-image: 'img/dayDust.jpg'; }
 .dayFog
-  { background-image: url('http://i.imgur.com/r3yXEOk.jpg'); }
+  { background-image: 'img/dayFog.jpg'; }
 .dayWind
-  { background-image: url('http://i.imgur.com/aT8C4st.jpg'); }
+  { background-image: 'img/dayWind.jpg'; }
 .dayCold
-  { background-image: url('http://i.imgur.com/zgNKmZ0.jpg'); }
+  { background-image: 'img/dayCold.jpg'; }
 .dayClouds
-  { background-image: url('http://i.imgur.com/SV079xP.jpg'); }
+  { background-image: 'img/dayClouds.jpg'; }
 .dayClear
-  { background-image: url('http://i.imgur.com/hMOAzSb.jpg'); }
+  { background-image: 'img/dayClear.jpg'; }
 .dayHot
-  { background-image: url('http://i.imgur.com/DVDGfDV.jpg'); }
+  { background-image: 'img/dayHot.jpg'; }
 .nightStorms
-  { background-image: url('http://i.imgur.com/7Sp3yBD.jpg'); }
+  { background-image: 'img/nightStorms.jpg'; }
 .nightWinteryPrecip
-  { background-image: url('http://i.imgur.com/Iresqfw.jpg'); }
+  { background-image: 'img/nightWinteryPrecip.jpg'; }
 .nightRain
-  { background-image: url('http://i.imgur.com/uMetsHR.jpg'); }
+  { background-image: 'img/nightRain.jpg'; }
 .nightSnow
-  { background-image: url('http://i.imgur.com/ynlEwkr.jpg'); }
+  { background-image: 'img/nightSnow.jpg'; }
 .nightDust
-  { background-image: url('http://i.imgur.com/Cr2BHQK.jpg'); }
+  { background-image: 'img/nightDust.jpg'; }
 .nightFog
-  { background-image: url('http://i.imgur.com/bKLzhNv.jpg'); }
+  { background-image: 'img/nightFog.jpg'; }
 .nightWind
-  { background-image: url('http://i.imgur.com/8ZhIiek.jpg'); }
+  { background-image: 'img/nightWind.jpg'; }
 .nightCold
-  { background-image: url('http://i.imgur.com/3X571Oy.jpg'); }
+  { background-image: 'img/nightCold.jpg'; }
 .nightClouds
-  { background-image: url('http://i.imgur.com/OqdxYam.jpg'); }
+  { background-image: 'img/nightClouds.jpg'; }
 .nightClear
-  { background-image: url('http://i.imgur.com/qJUCf7P.jpg'); }
+  { background-image: 'img/nightClear.jpg'; }
 .nightHot
-  { background-image: url('http://i.imgur.com/5Lb6V1V.jpg'); }
+  { background-image: 'img/nightHot.jpg'; }
