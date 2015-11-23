@@ -73,46 +73,46 @@ small
   Background Classes.
 **********************************************/
 .dayStorms
-  { background-image: url('img/dayStorms.jpg'); }
+  { background-image: url('../img/dayStorms.jpg'); }
 .dayWinteryPrecip
-  { background-image: url('img/dayWinteryPrecip.jpg'); }
+  { background-image: url('../img/dayWinteryPrecip.jpg'); }
 .dayRain
-  { background-image: url('img/dayRain.jpg'); }
+  { background-image: url('../img/dayRain.jpg'); }
 .daySnow
-  { background-image: url('img/daySnow.jpg'); }
+  { background-image: url('../img/daySnow.jpg'); }
 .dayDust
-  { background-image: url('img/dayDust.jpg'); }
+  { background-image: url('../img/dayDust.jpg'); }
 .dayFog
-  { background-image: url('img/dayFog.jpg'); }
+  { background-image: url('../img/dayFog.jpg'); }
 .dayWind
-  { background-image: url('img/dayWind.jpg'); }
+  { background-image: url('../img/dayWind.jpg'); }
 .dayCold
-  { background-image: url('img/dayCold.jpg'); }
+  { background-image: url('../img/dayCold.jpg'); }
 .dayClouds
-  { background-image: url('img/dayClouds.jpg'); }
+  { background-image: url('../img/dayClouds.jpg'); }
 .dayClear
-  { background-image: url('img/dayClear.jpg'); }
+  { background-image: url('../img/dayClear.jpg'); }
 .dayHot
-  { background-image: url('img/dayHot.jpg'); }
+  { background-image: url('../img/dayHot.jpg'); }
 .nightStorms
-  { background-image: url('img/nightStorms.jpg'); }
+  { background-image: url('../img/nightStorms.jpg'); }
 .nightWinteryPrecip
-  { background-image: url('img/nightWinteryPrecip.jpg'); }
+  { background-image: url('../img/nightWinteryPrecip.jpg'); }
 .nightRain
-  { background-image: url('img/nightRain.jpg'); }
+  { background-image: url('../img/nightRain.jpg'); }
 .nightSnow
-  { background-image: url('img/nightSnow.jpg'); }
+  { background-image: url('../img/nightSnow.jpg'); }
 .nightDust
-  { background-image: url('img/nightDust.jpg'); }
+  { background-image: url('../img/nightDust.jpg'); }
 .nightFog
-  { background-image: url('img/nightFog.jpg'); }
+  { background-image: url('../img/nightFog.jpg'); }
 .nightWind
-  { background-image: url('img/nightWind.jpg'); }
+  { background-image: url('../img/nightWind.jpg'); }
 .nightCold
-  { background-image: url('img/nightCold.jpg'); }
+  { background-image: url('../img/nightCold.jpg'); }
 .nightClouds
-  { background-image: url('img/nightClouds.jpg'); }
+  { background-image: url('../img/nightClouds.jpg'); }
 .nightClear
-  { background-image: url('img/nightClear.jpg'); }
+  { background-image: url('../img/nightClear.jpg'); }
 .nightHot
-  { background-image: url('img/nightHot.jpg'); }
+  { background-image: url('../img/nightHot.jpg'); }
