@@ -258,8 +258,9 @@ $(document).ready(function() {
   }
 
   function changeBackground(weather) {
-    // Time weather data was last updated.
-    var time = parseInt(convertTo24(weather.currently.date));
+    // Local time.
+    var time = new Date();
+    time = parseInt(time.getHours().toString() + time.getMinutes().toString());
 
     // Sunrise and sunset times.
     var sunrise = parseInt(convertTo24(weather.astronomy.sunrise));
