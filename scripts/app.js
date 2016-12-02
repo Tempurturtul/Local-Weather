@@ -102,12 +102,16 @@ $(document).ready(function() {
       bgClass,
       loadedWeather;
 
+  // NOTE: Yahoo deprecated API for finding place via coords.
   // Use browser to determine location.
-  if(navigator) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      loadWeather(position.coords.latitude + ',' + position.coords.longitude);
-    });
-  }
+  // if(navigator) {
+  //   navigator.geolocation.getCurrentPosition(function(position) {
+  //     loadWeather(position.coords.latitude + ',' + position.coords.longitude);
+  //   });
+  // }
+
+  // Use NYC as the default location.
+  loadWeather('New York, NY');
 
   // On form submit, load weather data for location.
   $('#search').on('submit', function() {
@@ -128,10 +132,19 @@ $(document).ready(function() {
 
   function loadWeather(location) {
     var weather = {},
-        yahooURL = 'https://query.yahooapis.com/v1/public/yql?format=json&q=select * from weather.forecast where woeid in (select woeid from geo.placefinder where text="' + location + '" and gflags="R" limit 1)';
+        yqlQuery = 'select * from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '")',
+        yahooURL = 'https://query.yahooapis.com/v1/public/yql?format=json&q=' + yqlQuery;
     $.ajax({
       url: yahooURL
     }).done(function(yahooData) {
+
+      // Check for null results.
+      if (yahooData.query.results === null) {
+        // TODO: Notify user.
+        console.error('No results found for given location.');
+        return;
+      }
+
       var channel = yahooData.query.results.channel;
 
       weather.link = channel.link;
