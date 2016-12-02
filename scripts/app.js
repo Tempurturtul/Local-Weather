@@ -102,12 +102,16 @@ $(document).ready(function() {
       bgClass,
       loadedWeather;
 
+  // NOTE: Yahoo deprecated API for finding place via coords.
   // Use browser to determine location.
-  if(navigator) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      loadWeather(position.coords.latitude + ',' + position.coords.longitude);
-    });
-  }
+  // if(navigator) {
+  //   navigator.geolocation.getCurrentPosition(function(position) {
+  //     loadWeather(position.coords.latitude + ',' + position.coords.longitude);
+  //   });
+  // }
+
+  // Use NYC as the default location.
+  loadWeather('New York, NY');
 
   // On form submit, load weather data for location.
   $('#search').on('submit', function() {
@@ -128,10 +132,19 @@ $(document).ready(function() {
 
   function loadWeather(location) {
     var weather = {},
-        yahooURL = 'https://query.yahooapis.com/v1/public/yql?format=json&q=select * from weather.forecast where woeid in (select woeid from geo.placefinder where text="' + location + '" and gflags="R" limit 1)';
+        yqlQuery = 'select * from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '")',
+        yahooURL = 'https://query.yahooapis.com/v1/public/yql?format=json&q=' + yqlQuery;
     $.ajax({
       url: yahooURL
     }).done(function(yahooData) {
+
+      // Check for null results.
+      if (yahooData.query.results === null) {
+        // TODO: Notify user.
+        console.error('No results found for given location.');
+        return;
+      }
+
       var channel = yahooData.query.results.channel;
 
       weather.link = channel.link;
@@ -156,7 +169,8 @@ $(document).ready(function() {
 
       // If US, add UV index before storing and displaying weather data.
       if (weather.location.country === 'United States') {
-        var epaURL = 'http://iaspub.epa.gov/enviro/efservice/getEnvirofactsUVHOURLY/CITY/' + weather.location.city + '/STATE/' + weather.location.region + '/xml';
+        // Apparently yahoo's API sometimes includes random whitespace (region: ' ny')?
+        var epaURL = 'https://iaspub.epa.gov/enviro/efservice/getEnvirofactsUVHOURLY/CITY/' + weather.location.city.trim() + '/STATE/' + weather.location.region.trim() + '/xml';
         $.ajax({
           url: epaURL
         }).done(function(epaData) {
@@ -258,11 +272,10 @@ $(document).ready(function() {
   }
 
   function changeBackground(weather) {
-    // Local time.
-    var time = new Date();
-    time = parseInt(time.getHours().toString() + time.getMinutes().toString());
+    // Time at searched location.
+    var time = parseInt(convertTo24(weather.currently.date));
 
-    // Sunrise and sunset times.
+    // Sunrise and sunset times at searched location.
     var sunrise = parseInt(convertTo24(weather.astronomy.sunrise));
     var sunset = parseInt(convertTo24(weather.astronomy.sunset));
 
@@ -297,14 +310,19 @@ $(document).ready(function() {
       time.toString();
     }
 
-    time = /([0-2]?[0-9]):([0-5][0-9])\s?(am|pm)?/i.exec(time);
+    // Yahoo sometimes excludes the second digit on minutes...
+    time = /([0-2]?[0-9]):([0-5]?[0-9])\s?(am|pm)?/i.exec(time);
 
     if(time[3] === 'pm' && time[1] !== '12') {
       time[1] = (parseInt(time[1]) + 12).toString();
     }
 
-    if(time[1],length === 1) {
+    if(time[1].length === 1) {
       time[1] = '0' + time[1];
+    }
+
+    if(time[2].length === 1) {
+      time[2] = time[2] + '0';
     }
 
     return time[1] + time[2];
