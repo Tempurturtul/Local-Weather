@@ -310,14 +310,19 @@ $(document).ready(function() {
       time.toString();
     }
 
-    time = /([0-2]?[0-9]):([0-5][0-9])\s?(am|pm)?/i.exec(time);
+    // Yahoo sometimes excludes the second digit on minutes...
+    time = /([0-2]?[0-9]):([0-5]?[0-9])\s?(am|pm)?/i.exec(time);
 
     if(time[3] === 'pm' && time[1] !== '12') {
       time[1] = (parseInt(time[1]) + 12).toString();
     }
 
-    if(time[1],length === 1) {
+    if(time[1].length === 1) {
       time[1] = '0' + time[1];
+    }
+
+    if(time[2].length === 1) {
+      time[2] = time[2] + '0';
     }
 
     return time[1] + time[2];
