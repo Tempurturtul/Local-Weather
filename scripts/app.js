@@ -169,7 +169,8 @@ $(document).ready(function() {
 
       // If US, add UV index before storing and displaying weather data.
       if (weather.location.country === 'United States') {
-        var epaURL = 'http://iaspub.epa.gov/enviro/efservice/getEnvirofactsUVHOURLY/CITY/' + weather.location.city + '/STATE/' + weather.location.region + '/xml';
+        // Apparently yahoo's API sometimes includes random whitespace (region: ' ny')?
+        var epaURL = 'https://iaspub.epa.gov/enviro/efservice/getEnvirofactsUVHOURLY/CITY/' + weather.location.city.trim() + '/STATE/' + weather.location.region.trim() + '/xml';
         $.ajax({
           url: epaURL
         }).done(function(epaData) {
