@@ -271,11 +271,10 @@ $(document).ready(function() {
   }
 
   function changeBackground(weather) {
-    // Local time.
-    var time = new Date();
-    time = parseInt(time.getHours().toString() + time.getMinutes().toString());
+    // Time at searched location.
+    var time = parseInt(convertTo24(weather.currently.date));
 
-    // Sunrise and sunset times.
+    // Sunrise and sunset times at searched location.
     var sunrise = parseInt(convertTo24(weather.astronomy.sunrise));
     var sunset = parseInt(convertTo24(weather.astronomy.sunset));
 
